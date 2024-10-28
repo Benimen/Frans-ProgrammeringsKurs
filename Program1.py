@@ -2,8 +2,11 @@ print ("hello")
 
 #test
 
-if 1 > 2:
-    print ("cool")
+a = 1
+b = 2
+
+if b > a:
+    print("This is ab comparison")
 
 
-print("testtest1")
+print("After ab")
