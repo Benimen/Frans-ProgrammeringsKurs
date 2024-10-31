@@ -1,3 +1,5 @@
+# for loop with if, elif and else
+
 for x in range(1, 101):
     if x % 3 == 0 and x % 5 == 0:    # Checks if current value of x is dividable by 3 and 5, if True then print Fizz if True prints FizzBuzz
         print("FizzBuzz")
@@ -14,12 +16,15 @@ for x in range(1, 101):
 
 
 
+# while loop with if, elif and else
 
-#for x in range(1, 101):
-#    if x % 3 == 0:
-#        print("Fizz")
-#    elif x % 5 == 0:
-#        print("Buzz")
-#    elif x % 3 == 0 and x % 5 == 0: #Do not place fizzbuzz here, it won't get reached
+#counter = 100
+#while counter > 0: 
+#    if counter % 3 == 0 and counter % 5 == 0:
 #        print("FizzBuzz")
-#    else: print(x)
+#    elif counter % 3 == 0:
+#        print("Fizz")
+#    elif counter % 5 == 0:
+#        print("Buzz")
+#    else: print(counter)
+#    counter = counter -1
