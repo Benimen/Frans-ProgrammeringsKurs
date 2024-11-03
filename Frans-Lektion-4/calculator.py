@@ -17,7 +17,7 @@ OPERATOR = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
 def user_input():
     try:
-        First_number = int(input("Basenumber: "))
+        first_number = int(input("Basenumber: "))
         operation = input("give me a operation[ +, -, *, /]: ")
         second_number = int(input("Number after operator: "))
 
@@ -27,7 +27,7 @@ def user_input():
 
 
     if operation in OPERATOR:
-        result = OPERATOR[operation](First_number, second_number)
+        result = OPERATOR[operation](first_number, second_number)
         print("Result:", result)
 
     else:
