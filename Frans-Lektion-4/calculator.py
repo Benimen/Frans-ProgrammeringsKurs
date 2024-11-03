@@ -17,20 +17,21 @@ OPERATOR = {"+": add, "-": subtract, "*": multiply, "/": divide}
 
 def user_input():
     try:
-        First_number = int(input("Give me a number: "))
-        second_number = int(input("Give me a another number: "))
+        First_number = int(input("Basenumber: "))
+        operation = input("give me a operation[ +, -, *, /]: ")
+        second_number = int(input("Number after operator: "))
 
     except ValueError:
         print("ERROR: Give a valid number.")
         return
 
-    operation = input("give me a operation[ +, -, *, /]: ")
 
     if operation in OPERATOR:
         result = OPERATOR[operation](First_number, second_number)
-        print("Result: ", result)
+        print("Result:", result)
 
     else:
         print("ERROR, Give a valid operator.")
+        return
 
 user_input()
