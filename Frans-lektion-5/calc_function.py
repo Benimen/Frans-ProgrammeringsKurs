@@ -9,25 +9,25 @@ def calculate(*args, operation ="add"):
         return "Error, must be number: "
 
 
-    if operation == "+":
+    if operation == "add":
         return sum(args)
     
 
-    elif operation == "-":
+    elif operation == "subtract":
         result = args[0]
         for num in args[1:]:
             result -= num
         return result
     
 
-    elif operation == "*":
+    elif operation == "multiply":
         result = 1
         for num in args:
             result *= num
         return result
     
 
-    elif operation == "/":
+    elif operation == "divide":
         result = args[0]
         for num in args[1:]:
             if num == 0:
@@ -40,7 +40,7 @@ def calculate(*args, operation ="add"):
         return "Error, Invalid operation"
     
 numbers_input = input("Enter numbers and separate with space: ")
-operation_input = input("Enter operation (+, -, *, /): ")
+operation_input = input("Enter operation (add, subtract, multiply, divide): ")
 
 
 try:
