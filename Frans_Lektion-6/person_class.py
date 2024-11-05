@@ -7,23 +7,25 @@ class Person:
         return f"Person: Name: {self.name}, Age: {self.age}"
 
 
-def get_user_input():
-    while True:
-        
-        name = input("Give me a name: ")
-        if name.isalpha():
-            try:
-                age = int(input("Give me a age: "))
-                if age < 0:
-                    print("Age must have a positive value, try again.")
-                    continue
+while True:
+    
+    name = input("Give me a name: ")
 
-                person = Person(name, age)
-                print(person)
-            except ValueError:
-                print("Give a valid age (integer not float)")
-        else:
-            print("error: Please use characters and not integers")
-            continue
 
-get_user_input()
+    if not name.isalpha():
+        print("error: Please use characters and not integers")
+        continue
+
+
+    age = input("Give me a age: ")
+    if not age.isdigit():
+        print("Age must have a positive value, try again.")
+        continue
+
+
+    age = int(age)
+
+
+    person = Person(name, age)
+    print(person)
+    break
