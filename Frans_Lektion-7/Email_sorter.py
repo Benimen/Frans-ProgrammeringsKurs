@@ -6,8 +6,6 @@ with open("users.txt", "r") as file:
 
 
 # Capture email addresses
-email_pattern = r"[a-zA-Z0-9]+@[a-zA-Z.-]+\.[a-zA-Z]{2,}"
-
 gmail_pattern = r"[a-zA-Z0-9]+@[gmail.-]+\.[a-zA-Z]{2,}"
 
 yahoo_pattern = r"[a-zA-Z0-9]+@[yahoo.-]+\.[a-zA-Z]{2,}"
