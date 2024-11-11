@@ -13,23 +13,25 @@ data = {
     }
 }
 
-#Create a tuple for active students
+
 def get_active_students(data):
-    return tuple(
-    name for name, info in data["studenter"] if info["aktiv"]
-)
-
-#Create a tuple for inactive students
-def get_inactive_students(data):
-    return tuple(
-    name for name, info in data["studenter"] if not info["aktiv"]
-)
+    return tuple(student for student, info in data["studenter"] if info["aktiv"])
 
 
 
+def active_students_subjects(data):
+    subjects = set()
+
+    for name, info in data["studenter"]:
+        if info["aktiv"]:
+            print(f"{name} is studying: {", ".join(info["ämnen"])}")
+            subjects.update(info["ämnen"])
+
+    return subjects
+
+# call functions
 active_students = get_active_students(data)
-inactive_students = get_inactive_students(data)
 
+print(f"The current active students are: {active_students}")
 
-print("These students are active", active_students)
-print("These students are inactive: ", inactive_students)
+unique_subjects = active_students_subjects(data)
